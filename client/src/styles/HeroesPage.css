@@ -14,12 +14,28 @@
   margin: 1rem;
   padding: .5rem;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.2s;
+  transition: all 0.2s;
   width: calc(95% / 3);
   position: relative;
 }
 
+.HeroCard__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  transition: 0.3s ease-out;
+}
+
+.HeroCard:hover .HeroCard__background {
+  transform: scale(2);
+}
+
 .HeroCard__header {
+  z-index: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -32,6 +48,9 @@
   transition: all .2s;
 }
 
+.HeroCard__portrait:hover {
+  transform: scale(1.1);
+}
 
 .HeroCard__name, .HeroCard__name a {
   text-decoration: none;
@@ -41,6 +60,7 @@
 }
 
 .HeroCard__button-container {
+  z-index: 0;
   width: 100%;
   display: flex;
   flex-direction: row;

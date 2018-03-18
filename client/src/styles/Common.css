@@ -17,19 +17,38 @@
   line-height: 1;
   letter-spacing: .05rem;
   transition: all .2s;
+
+  box-shadow:
+    0 1px 4px rgba(0,0,0,0.25),
+    inset 0 1px rgba(255,255,255,0.3), 
+    inset 0 10px rgba(255,255,255,0.2), 
+    inset 0 10px 20px rgba(255,255,255,0.25), 
+    inset 0 -15px 30px rgba(0,0,0,0.3); 
+
 }
 
 .Button:hover {
-  background-color: #ffb033;
   transform: translateY(-2px);
-	box-shadow: 0 2px 8px rgba(0,0,0,0.5); 
+	box-shadow:
+    0 2px 8px rgba(0,0,0,0.5), 
+    inset 0 1px rgba(255,255,255,0.25), 
+    inset 0 10px rgba(255,255,255,0.15), 
+    inset 0 10px 20px rgba(255,255,255,0.3), 
+    inset 0 -15px 30px rgba(0,0,0,0.25); 
 }
 
 .Button:active {
   background-color: #ffb033;
-  transform: translateY(-1px);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.25); 
+  transform: translateY(0);
+  box-shadow:
+    0 1px 4px rgba(0,0,0,0.25), 
+    inset 0 1px rgba(255,255,255,0.3), 
+    inset 0 10px rgba(255,255,255,0.2), 
+    inset 0 10px 20px rgba(255,255,255,0.25), 
+    inset 0 -15px 30px rgba(0,0,0,0.3); 
 }
+
+
 
 .TextInput { 
   margin: 2rem auto;
@@ -44,9 +63,28 @@
   width: 100%;
   border: none;
   background-color: transparent;
+  border-bottom: 2px solid #999;
   color: #3E474B;
 }
 
 .TextInput__input:focus { 
   outline: none; 
+  border-bottom: 2px solid #ff9c00;
+}
+
+.TextInput__label {
+  color:#999; 
+  font-size: 2rem;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: .5rem;
+  top: 1rem;
+  transition: 0.2s ease all; 
+}
+
+.TextInput__input:focus ~ label, .TextInput__input:valid ~ label {
+  top: -2rem;
+  font-size: 1.5rem;
+  color: #ff9c00;
 }

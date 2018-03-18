@@ -7,7 +7,8 @@ const HeroCard = (props) => {
   const portrait = hero.attributes.image_portrait;
 
   return (
-    <div className="HeroCard" style={{backgroundImage:`url(${bgImage})`}}>
+    <div className="HeroCard" >
+      <div className="HeroCard__background" style={{backgroundImage:`url(${bgImage})`}} />
       <div className="HeroCard__header">
         <Link to={`/heroes/${hero.attributes.slug}`}><img className="HeroCard__portrait" src={portrait} alt={`${hero.attributes.name} portrait`} /></Link>
         <h1 className="HeroCard__name" ><Link to={`/heroes/${hero.attributes.slug}`}>{hero.attributes.name}</Link></h1>
