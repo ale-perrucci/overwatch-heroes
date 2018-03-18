@@ -4,8 +4,9 @@ const routes = require('./routes');
 
 const app = express();
 
-const PORT = process.env.PORT || 5000;
+app.use(express.static(__dirname + '/client/build'));
 
+const PORT = process.env.PORT || 5000;
 
 initializeDB().then(db => {
   routes(app, db).listen(PORT, () => {
