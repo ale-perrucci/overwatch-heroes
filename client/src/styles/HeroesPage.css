@@ -1,0 +1,49 @@
+.HeroesList {
+  margin: 0 auto;
+  max-width: 150rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.HeroCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 1rem;
+  padding: .5rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.2s;
+  width: calc(95% / 3);
+  position: relative;
+}
+
+.HeroCard__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.HeroCard__portrait {
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+  transition: all .2s;
+}
+
+
+.HeroCard__name, .HeroCard__name a {
+  text-decoration: none;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #3E474B;
+}
+
+.HeroCard__button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

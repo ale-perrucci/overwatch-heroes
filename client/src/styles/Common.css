@@ -1,0 +1,32 @@
+.Button {
+  width: 46%;
+  margin: 0.5rem 0; 
+  display: inline-block;
+  background-color: #ff9c00;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: .8rem 2rem .5rem 2rem;
+  vertical-align: middle;
+  outline: none;
+  border-radius: 2px;
+  line-height: 1;
+  letter-spacing: .05rem;
+  transition: all .2s;
+}
+
+.Button:hover {
+  background-color: #ffb033;
+  transform: translateY(-2px);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5); 
+}
+
+.Button:active {
+  background-color: #ffb033;
+  transform: translateY(-1px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25); 
+}

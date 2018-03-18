@@ -1,0 +1,12 @@
+.HeroPage {
+  width: 100%;
+  height: 100vh; 
+  background-size: cover; 
+  padding: 3rem;
+}
+
+.HeroPage__container {
+  background-color: rgba(255, 255, 255, .75);
+  border-radius: 3px;
+  padding: 3rem;
+}
