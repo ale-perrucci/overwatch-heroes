@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import logo from '../images/overwatch-logo.png';
 import HeroCard from './HeroCard';
+import TextInput from './TextInput';
 
 class HeroesPage extends Component {
   state = { 
@@ -47,6 +48,14 @@ class HeroesPage extends Component {
     }
   }
 
+  handleFilterChange = text => {
+    let filteredHeroes = [];
+    if (text.length > this.state.filter.length) {
+      filteredHeroes = this.state.heroes.filter(h => h.attributes.name.startsWith(text) || h.attributes.slug.startsWith(text));
+    }
+    this.setState({ filter: text, heroes: [...filteredHeroes], lastHeroLoaded: '', allHeroesLoaded: false }, () => this.loadHeroes(6, true));
+  }
+
   componentDidMount() {
     this.loadHeroes(6, true);
     window.addEventListener('scroll', this.conditionalLoadHeroes, false);
@@ -57,7 +66,7 @@ class HeroesPage extends Component {
     window.removeEventListener('scroll', this.conditionalLoadHeroes, false);
     window.removeEventListener('resize', this.conditionalLoadHeroes, false);
   }
-  
+
   render() {
     const { heroes } = this.state;
 
@@ -66,6 +75,7 @@ class HeroesPage extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
+        <TextInput label="Search" value={this.props.filter} onTextChange={this.handleFilterChange}/>
         <div className="HeroesList">
           {heroes.map(h => <HeroCard key={h.id} hero={h} />)}
         </div>

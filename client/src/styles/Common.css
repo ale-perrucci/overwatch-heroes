@@ -30,3 +30,23 @@
   transform: translateY(-1px);
   box-shadow: 0 1px 4px rgba(0,0,0,0.25); 
 }
+
+.TextInput { 
+  margin: 2rem auto;
+  max-width: 30rem;
+  position: relative; 
+}
+
+.TextInput__input {
+  font-size: 2rem;
+  padding: 1rem 1rem 1rem .5rem;
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: #3E474B;
+}
+
+.TextInput__input:focus { 
+  outline: none; 
+}

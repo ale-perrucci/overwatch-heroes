@@ -47,3 +47,43 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+
+
+
+@media screen and (max-width: 1300px) {
+  .HeroesList {
+    max-width: 100rem;
+  }
+
+  .HeroCard {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+
+  .HeroCard {
+    width: 100%;
+    margin: .5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .HeroCard__name a {
+    font-size: 3rem;
+  }
+
+  .Button {
+    width: 100%;
+  }
+}
