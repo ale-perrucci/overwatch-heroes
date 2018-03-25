@@ -1,6 +1,8 @@
 # overwatch-heroes
 A simple single page application that provides information about Overwatch heroes.
 
+*New version available!* https://github.com/ale-perrucci/overwatch-heroes-fullstack
+
 A demo is hosted on Heroku:
 https://overwatch-heroes-dojo.herokuapp.com/
 
